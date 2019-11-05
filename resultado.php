@@ -13,6 +13,7 @@
 
     if($resultado->num_rows>0){
         session_start();
+        $_SESSION["datosUsuario"]=mysqli_fetch_assoc($resultado);
         $_SESSION["Usuario"]=$Usuario;
         $datos=[
             "mensaje"=>"<h1 class=\"text-success\">Bienvenid@".$Usuario."</h1>",

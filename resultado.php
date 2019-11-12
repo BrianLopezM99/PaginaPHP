@@ -3,7 +3,7 @@
     $Usuario=$_POST["Usuario"];
     $Password=hash("whirlpool",$_POST["password"]);
 
-    $statement="SELECT Contrasena
+    $statement="SELECT id, nombre
                 FROM usuarios
                 where Contrasena='$Password'
                 and Nombre ='$Usuario'";
